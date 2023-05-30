@@ -17,3 +17,7 @@ Things you may want to cover:
 - Credits
 - Badges
   
+Installing SASS
+
+- npm install -g sass
+- sass --watch styles.scss:index.css

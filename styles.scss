@@ -1,0 +1,38 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    display: block;
+    width: 20%;
+  }
+}
+
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  display: none;
+}

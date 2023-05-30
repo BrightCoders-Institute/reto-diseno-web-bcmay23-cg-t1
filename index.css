@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav img {
+  display: block;
+  width: 20%;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */
