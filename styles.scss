@@ -1,5 +1,40 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+/* ========================= */
+/* Variables y utilidades */
+/* ========================= */
+
+//Colores 
+$Pink: hsl(322, 100%, 66%);
+$Cyan: hsl(193, 100%, 96%);
+$DarkCyan: hsl(192, 100%, 9%);
+$GrayishBlue: hsl(208, 11%, 55%);
+$White: #fff;
+
+//Fuentes 
+$Heading:'Poppins', sans-serif;
+
+//Mixins
+@mixin boton($bgColor, $colorTexto){
+  background-color: $bgColor;
+  padding: 1.5rem 4rem;
+  color: $colorTexto;
+  font-weight: 700;
+  border-radius: 3rem;
+  border: none;
+  text-align: center;
+  transition-property: background-color;
+  transition-duration: .3s;
+  &:hover{
+    background-color: lighten($bgColor, 10%);
+    cursor: pointer;
+  }
+}
+
+//Utilidades
+.sombra{
+  -webkit-box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
+box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
+}
 
 html {
   box-sizing: border-box;
@@ -13,8 +48,7 @@ html {
 }
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .nav {
@@ -27,6 +61,9 @@ body {
   }
 }
 
+.botonPrincipal{
+  @include boton($White,$DarkCyan);
+}
 
 .container {
   max-width: 90%;
