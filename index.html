@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./index.css" />
     <title>Hundle</title>
 </head>
@@ -41,7 +42,7 @@
 
     <main class="container">
 
-        <div>
+        <div class="card sombra_card">
             <img src="img/illustration-grow-together.svg" alt="illustration-grow-together">
             <h1>Grow Together</h1>
             <p>
@@ -50,7 +51,7 @@
             </p>
         </div>
 
-        <div>
+        <div class="card sombra_card">
             <img src="img/illustration-flowing-conversation.svg" alt="illustration-flowing-conversation">
             <h1>Flowing Conversations</h1>
             <p>
@@ -59,7 +60,7 @@
             </p>
         </div>
 
-        <div>
+        <div class="card sombra_card">
             <img src="img/illustration-your-users.svg" alt="illustration-your-users">
             <h1>Your Users</h1>
             <p>
@@ -68,35 +69,41 @@
             </p>
         </div>
 
-        <div>
-            <h1>Ready To Build Your Community?</h1>
+        <div class="sombra_card card">
+            <h2>Ready To Build Your Community?</h2>
             <button>
                 Get Started For Free
             </button>
         </div>
+
     </main>
 
-    <footer>
-        <img src="img/logo.svg" alt="logo">
+    <footer class="footer">
+        <img src="img/logo_white.svg" alt="logo">
 
-        <div>
+        <div class="footer__location">
             <img src="img/icon-location.svg">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.
             </p>
+        </div>
 
+        <div class="footer__phone">
             <img src="img/icon-phone.svg">
             <p>
                 +1-543-123-4567
             </p>
+        </div>
 
+        <div class="footer__email">
             <img src="img/icon-email.svg">
             <p>
                 example.@fylo.com
             </p>
         </div>
 
-        <ul>
+
+        <ul class="footer__nav">
             <li>About us</li>
             <li>What we do</li>
             <li>FAQ</li>
@@ -105,13 +112,13 @@
             <li>Contact us</li>
         </ul>
 
-        <div>
+        <div class="footer__social">
             <img src="img/icon-email.svg">
             <img src="img/icon-email.svg">
             <img src="img/icon-email.svg">
         </div>
 
-        <p>
+        <p class="footer__copy">
             &copy; Copyrigth 2021 Hundle. All rights reserved
         </p>
     </footer>

@@ -36,6 +36,12 @@ $Heading:'Poppins', sans-serif;
 box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
 }
 
+.sombra_card {
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -59,6 +65,11 @@ h1{
   color: $DarkCyan;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-family: $Heading;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -68,6 +79,7 @@ h1{
     display: block;
     width: 30%;
   }
+  padding-top: 2rem;
 }
 
 .botonPrincipal{
@@ -121,5 +133,106 @@ header{
   padding: 1rem;
   section{
     font-size: 1.5rem;
+  }
+}
+
+.card {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+
+  p, h1 {
+    text-align: center;
+  }
+
+  p {
+    color: $GrayishBlue;
+    margin-top: 0.5rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  img {
+    margin-bottom: 3rem;
+  }
+}
+
+.card:last-of-type {
+  margin-top: 10rem;
+  background-color: $White;
+  position: relative;
+  z-index: 1;
+
+  button {
+    @include boton($Pink, $White);
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+.footer {
+  background-color: $DarkCyan;
+  color: $White;
+  padding-top: 15rem;
+  margin-top: -9rem;
+  position: absolute;
+  z-index: 0;
+  padding-left: 1rem;
+
+  svg {
+    fill: $White;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    padding-bottom: 2rem;
+  }
+
+  &__social {
+    display: flex;
+    margin: 0 auto 2rem auto;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 2rem ;
   }
 }

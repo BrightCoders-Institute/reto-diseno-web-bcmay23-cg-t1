@@ -7,6 +7,12 @@
   box-shadow: -1px -1px 8px -3px rgba(0, 0, 0, 0.75);
 }
 
+.sombra_card {
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.2);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -30,10 +36,16 @@ h1 {
   color: hsl(192, 100%, 9%);
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 2rem;
 }
 .nav img {
   display: block;
@@ -109,6 +121,105 @@ header {
 }
 .heder-body-title section {
   font-size: 1.5rem;
+}
+
+.card {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+}
+.card p, .card h1 {
+  text-align: center;
+}
+.card p {
+  color: hsl(208, 11%, 55%);
+  margin-top: 0.5rem;
+}
+.card h1 {
+  margin-bottom: 0.5rem;
+}
+.card img {
+  margin-bottom: 3rem;
+}
+
+.card:last-of-type {
+  margin-top: 10rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.card:last-of-type button {
+  background-color: hsl(322, 100%, 66%);
+  padding: 1rem 4rem;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 3rem;
+  border: none;
+  text-align: center;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+.card:last-of-type button:hover {
+  background-color: #ff85d2;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  color: #fff;
+  padding-top: 15rem;
+  margin-top: -9rem;
+  position: absolute;
+  z-index: 0;
+  padding-left: 1rem;
+}
+.footer svg {
+  fill: #fff;
+}
+.footer__location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.footer__phone {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.footer__email {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.footer ul {
+  list-style: none;
+  padding-bottom: 2rem;
+}
+.footer ul li {
+  margin-bottom: 1.5rem;
+}
+.footer__social {
+  display: flex;
+  margin: 0 auto 2rem auto;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer__copy {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */
