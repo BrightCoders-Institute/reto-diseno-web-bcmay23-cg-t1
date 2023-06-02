@@ -8,11 +8,18 @@ $Cyan: hsl(193, 100%, 96%);
 $DarkCyan: hsl(192, 100%, 9%);
 $GrayishBlue: hsl(208, 11%, 55%);
 $White: #fff;
+$desktop: 1440px;
 
 //Fuentes 
 $Heading: 'Poppins', sans-serif;
 
 //Mixins
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
 @mixin boton($bgColor, $colorTexto, $paddingX) {
   background-color: $bgColor;
   padding: 1rem $paddingX;
@@ -28,6 +35,15 @@ $Heading: 'Poppins', sans-serif;
   &:hover {
     background-color: lighten($bgColor, 10%);
     cursor: pointer;
+  }
+
+  @include desktop() {
+    //todo: arreglar el margin top en mobile
+    width: 40rem;
+    margin-top: 3rem;
+    padding: 3rem 1rem;
+    font-size: 2rem;
+    border-radius: 10rem;
   }
 }
 
@@ -88,6 +104,13 @@ h2 {
   }
 
   padding-top: 2rem;
+
+  @include desktop() {
+    padding-top: 3rem;
+    img {
+      width: 15%;
+    }
+  }
 }
 
 .botonPrincipal {
@@ -119,12 +142,21 @@ img {
   button {
     @include boton($Pink, $White, 4rem);
   }
+
+  @include desktop(){
+    flex-direction: row;
+    margin: 10rem 10rem 0 10rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .header-image {
   width: 70%;
   margin-bottom: 3rem;
   margin-top: 3rem;
+  @include desktop(){
+    width: 50%;
+  }
 }
 
 header {
@@ -140,12 +172,26 @@ header {
   width: 80%;
   padding: 1rem;
   line-height: 1.5;
+  @include desktop(){
+    // justify-content: start;
+    text-align: left;
+    width: 30%;
+    h1{
+      font-size: 6rem;
+    }
+  }
 
   section {
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1rem;
+
+    @include desktop() {
+      font-size: 2.2rem;
+    }
   }
 }
+
+//todo: separar cards del header
 
 .card {
   width: 95%;
@@ -172,10 +218,48 @@ header {
 
   h1 {
     margin-bottom: 0.5rem;
+    
   }
 
   img {
     margin-bottom: 3rem;
+    @include desktop(){
+      width: 30%;
+    }
+  }
+
+  @include desktop(){
+    justify-content: center;
+    gap: 10rem;
+    flex-direction: row;
+  }
+}
+
+.card:nth-child(1), .card:nth-child(3){
+  @include desktop(){
+    flex-direction: row-reverse;
+  }
+}
+
+.card-body{
+  
+
+  width: 100%;
+  @include desktop(){
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 20rem;
+
+    h1{
+      font-size: 4rem;
+      text-align: left;
+    }
+
+    p{
+      font-size: 2.7rem;
+      text-align: left;
+    }
   }
 }
 

@@ -51,6 +51,14 @@ h2 {
   display: block;
   width: 30%;
 }
+@media (min-width: 1440px) {
+  .nav {
+    padding-top: 3rem;
+  }
+  .nav img {
+    width: 15%;
+  }
+}
 
 .botonPrincipal {
   background-color: #fff;
@@ -67,6 +75,15 @@ h2 {
 .botonPrincipal:hover {
   background-color: white;
   cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .botonPrincipal {
+    width: 40rem;
+    margin-top: 3rem;
+    padding: 3rem 1rem;
+    font-size: 2rem;
+    border-radius: 10rem;
+  }
 }
 
 .container {
@@ -104,11 +121,32 @@ img {
   background-color: #ff85d2;
   cursor: pointer;
 }
+@media (min-width: 1440px) {
+  .header-body button {
+    width: 40rem;
+    margin-top: 3rem;
+    padding: 3rem 1rem;
+    font-size: 2rem;
+    border-radius: 10rem;
+  }
+}
+@media (min-width: 1440px) {
+  .header-body {
+    flex-direction: row;
+    margin: 10rem 10rem 0 10rem;
+    padding-bottom: 10rem;
+  }
+}
 
 .header-image {
   width: 70%;
   margin-bottom: 3rem;
   margin-top: 3rem;
+}
+@media (min-width: 1440px) {
+  .header-image {
+    width: 50%;
+  }
 }
 
 header {
@@ -124,9 +162,23 @@ header {
   padding: 1rem;
   line-height: 1.5;
 }
+@media (min-width: 1440px) {
+  .heder-body-title {
+    text-align: left;
+    width: 30%;
+  }
+  .heder-body-title h1 {
+    font-size: 6rem;
+  }
+}
 .heder-body-title section {
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 1440px) {
+  .heder-body-title section {
+    font-size: 2.2rem;
+  }
 }
 
 .card {
@@ -156,6 +208,44 @@ header {
 .card img {
   margin-bottom: 3rem;
 }
+@media (min-width: 1440px) {
+  .card img {
+    width: 30%;
+  }
+}
+@media (min-width: 1440px) {
+  .card {
+    justify-content: center;
+    gap: 10rem;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card:nth-child(1), .card:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+}
+
+.card-body {
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 20rem;
+  }
+  .card-body h1 {
+    font-size: 4rem;
+    text-align: left;
+  }
+  .card-body p {
+    font-size: 2.7rem;
+    text-align: left;
+  }
+}
 
 .card:last-of-type {
   margin-top: 10rem;
@@ -181,6 +271,15 @@ header {
 .card:last-of-type button:hover {
   background-color: #ff85d2;
   cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .card:last-of-type button {
+    width: 40rem;
+    margin-top: 3rem;
+    padding: 3rem 1rem;
+    font-size: 2rem;
+    border-radius: 10rem;
+  }
 }
 
 .footer {

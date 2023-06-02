@@ -21,3 +21,9 @@ Installing SASS
 
 - npm install -g sass
 - sass --watch styles.scss:index.css
+
+CoAuthors:
+Gabino gabinomorales1212@hotmail.com
+Juan juanmmv16@gmail.com
+Alejandro alejo082495@gmail.com
+Yoel bhernandez1@ucol.mx
