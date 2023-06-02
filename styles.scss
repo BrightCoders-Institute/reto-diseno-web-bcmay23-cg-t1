@@ -10,36 +10,42 @@ $GrayishBlue: hsl(208, 11%, 55%);
 $White: #fff;
 
 //Fuentes 
-$Heading:'Poppins', sans-serif;
+$Heading: 'Poppins', sans-serif;
 
 //Mixins
-@mixin boton($bgColor, $colorTexto){
+@mixin boton($bgColor, $colorTexto, $paddingX) {
   background-color: $bgColor;
-  padding: 1rem 4rem;
+  padding: 1rem $paddingX;
   color: $colorTexto;
   font-weight: 700;
   border-radius: 3rem;
   border: none;
   text-align: center;
+  font-size: 1rem;
   transition-property: background-color;
   transition-duration: .3s;
-  &:hover{
+
+  &:hover {
     background-color: lighten($bgColor, 10%);
     cursor: pointer;
   }
 }
 
 //Utilidades
-.sombra{
-  -webkit-box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
--moz-box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
-box-shadow: -1px -1px 8px -3px rgba(0,0,0,0.75);
+.sombra {
+  -webkit-box-shadow: -1px -1px 8px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -1px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -1px 8px -3px rgba(0, 0, 0, 0.75);
 }
 
 .sombra_card {
-  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 23px 1px rgba(0, 0, 0, 0.1);
+
+  // -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+  // -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+  // box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
 }
 
 html {
@@ -58,7 +64,7 @@ body {
   font-size: 1.8rem;
 }
 
-h1{
+h1 {
   font-family: $Heading;
   font-size: 2.3rem;
   font-weight: 700;
@@ -74,52 +80,54 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   // margin-bottom: 3;
   img {
     display: block;
     width: 30%;
   }
+
   padding-top: 2rem;
 }
 
-.botonPrincipal{
-  @include boton($White,$DarkCyan);
+.botonPrincipal {
+  @include boton($White, $DarkCyan, 3rem);
 }
 
 .container {
   max-width: 90%;
   margin: 0 auto;
-  // display: block;
-  img{
 
-  }
+  // display: block;
 }
 
-img{
-  max-width: 80%;
+img {
+  max-width: 100%;
   height: auto;
 }
 
-.header-body{
+.header-body {
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   // padding: 0 2rem;
   margin: 7rem 0;
-  button{
-    @include boton($Pink,$White);
+
+  button {
+    @include boton($Pink, $White, 4rem);
   }
 }
 
-.header-image{
+.header-image {
   width: 70%;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
-header{
+header {
   background-image: url("img/bg-hero-mobile.svg");
   background-position: center top;
   background-repeat: no-repeat;
@@ -128,10 +136,13 @@ header{
   // padding-bottom: 1rem;
 }
 
-.heder-body-title{
+.heder-body-title {
   width: 80%;
   padding: 1rem;
-  section{
+  line-height: 1.5;
+
+  section {
+    font-weight: 200;
     font-size: 1.5rem;
   }
 }
@@ -140,18 +151,21 @@ header{
   width: 95%;
   margin: 0 auto;
   border-radius: 2rem;
-  padding: 2.5rem;
+  padding: 5rem;
   display: flex;
+  line-height: 1.5;
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
   justify-content: space-between;
 
-  p, h1 {
+  p,
+  h1 {
     text-align: center;
   }
 
   p {
+    font-size: 1.3rem;
     color: $GrayishBlue;
     margin-top: 0.5rem;
   }
@@ -167,12 +181,13 @@ header{
 
 .card:last-of-type {
   margin-top: 10rem;
+  padding: 2rem;
   background-color: $White;
   position: relative;
   z-index: 1;
 
   button {
-    @include boton($Pink, $White);
+    @include boton($Pink, $White, 4rem);
     font-size: 1rem;
     margin: 1rem 0;
   }
@@ -185,7 +200,7 @@ header{
   margin-top: -9rem;
   position: absolute;
   z-index: 0;
-  padding-left: 1rem;
+  padding-left: 2rem;
 
   svg {
     fill: $White;
@@ -215,7 +230,8 @@ header{
 
   ul {
     list-style: none;
-    
+    padding: 0;
+
     li {
       margin-bottom: 1.5rem;
     }
@@ -228,11 +244,20 @@ header{
     margin: 0 auto 2rem auto;
     justify-content: center;
     gap: 1rem;
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   &__copy {
     text-align: center;
     font-size: 1rem;
-    padding-bottom: 2rem ;
+    padding-bottom: 2rem;
+  }
+
+  img {
+    max-width: 45%;
   }
 }
