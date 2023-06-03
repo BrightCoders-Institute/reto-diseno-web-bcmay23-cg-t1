@@ -174,6 +174,7 @@ header {
 .heder-body-title section {
   font-weight: 200;
   font-size: 1rem;
+  margin-bottom: 3rem;
 }
 @media (min-width: 1440px) {
   .heder-body-title section {
@@ -281,6 +282,16 @@ header {
     border-radius: 10rem;
   }
 }
+@media (min-width: 1440px) {
+  .card:last-of-type {
+    display: block;
+    text-align: center;
+    width: 56%;
+  }
+  .card:last-of-type h2 {
+    font-size: 3rem;
+  }
+}
 
 .footer {
   background-color: hsl(192, 100%, 9%);
@@ -288,8 +299,29 @@ header {
   padding-top: 15rem;
   margin-top: -9rem;
   position: absolute;
+  right: 0;
+  left: 0;
   z-index: 0;
   padding-left: 2rem;
+}
+@media (min-width: 1440px) {
+  .footer .container__footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer .container__footer .footer__info {
+    width: 33%;
+  }
+  .footer .container__footer .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10rem;
+  }
+  .footer .container__footer .footer__box {
+    margin-right: 7rem;
+  }
 }
 .footer svg {
   fill: #fff;
@@ -335,6 +367,12 @@ header {
   text-align: center;
   font-size: 1rem;
   padding-bottom: 2rem;
+}
+@media (min-width: 1440px) {
+  .footer__copy {
+    margin-right: 6rem;
+    text-align: right;
+  }
 }
 .footer img {
   max-width: 45%;

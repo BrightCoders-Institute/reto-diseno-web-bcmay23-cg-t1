@@ -184,6 +184,7 @@ header {
   section {
     font-weight: 200;
     font-size: 1rem;
+    margin-bottom: 3rem;
 
     @include desktop() {
       font-size: 2.2rem;
@@ -275,6 +276,17 @@ header {
     font-size: 1rem;
     margin: 1rem 0;
   }
+
+  @include desktop(){
+    display: block;
+    text-align: center;
+    width: 56%;
+
+    h2{
+      font-size: 3rem;
+    }
+  }
+  
 }
 
 .footer {
@@ -283,8 +295,34 @@ header {
   padding-top: 15rem;
   margin-top: -9rem;
   position: absolute;
+  right: 0;
+  left: 0;
   z-index: 0;
   padding-left: 2rem;
+
+  @include desktop(){
+    .container__footer{
+
+      .footer__info{
+        width: 33%;
+      }
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto ;
+
+      .footer__nav{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10rem;      
+      }
+
+      .footer__box{
+        margin-right: 7rem;
+      }
+    }
+  }
 
   svg {
     fill: $White;
@@ -339,6 +377,11 @@ header {
     text-align: center;
     font-size: 1rem;
     padding-bottom: 2rem;
+
+    @include desktop(){
+      margin-right: 6rem;
+      text-align: right;
+    }
   }
 
   img {
