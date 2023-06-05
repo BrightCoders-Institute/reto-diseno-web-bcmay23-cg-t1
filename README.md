@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2v7U_SMo)
 ![BrightCoders Logo](img/logo.png)
 
 # Reto: Diseño web
@@ -16,3 +17,13 @@ Things you may want to cover:
 - Credits
 - Badges
   
+Installing SASS
+
+- npm install -g sass
+- sass --watch styles.scss:index.css
+
+CoAuthors:
+Gabino gabinomorales1212@hotmail.com
+Juan juanmmv16@gmail.com
+Alejandro alejo082495@gmail.com
+Yoel bhernandez1@ucol.mx

@@ -1,0 +1,28 @@
+{
+  "name": "reto-diseno-web-bcmay23-cg-t1",
+  "version": "1.0.0",
+  "description": "Primer Proyecto Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrightCoders-Institute/reto-diseno-web-bcmay23-cg-t1.git"
+  },
+  "keywords": [
+    "SASS",
+    "HTML",
+    "CSS",
+    "NPM"
+  ],
+  "author": "BCMAY23-CG-T1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrightCoders-Institute/reto-diseno-web-bcmay23-cg-t1/issues"
+  },
+  "homepage": "https://github.com/BrightCoders-Institute/reto-diseno-web-bcmay23-cg-t1#readme",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}
